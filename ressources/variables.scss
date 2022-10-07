@@ -1,0 +1,15 @@
+$font-stack: "Space Mono", monospace;
+$couleur-gris: #6b717f;
+$couleur-blanc: #fff;
+$couleur-bordure: #8C8C8C;
+$couleur-noir: #000;
+$couleur-rose: #BF4080;
+$couleur-vert: green;
+$couleur-rouge: red;
+$couleur-orange: orange;
+$padding-px: 16px;
+@mixin theme($theme: GreyShadow){
+    -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    box-shadow: 10px 10px 15px -4px $couleur-gris;
+  }
