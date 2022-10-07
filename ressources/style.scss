@@ -1,0 +1,103 @@
+$font-stack: "Space Mono", monospace;
+$couleur-gris: #6b717f;
+$couleur-blanc: #fff;
+$couleur-bordure: #8C8C8C;
+$couleur-noir: #000;
+$couleur-rose: #BF4080;
+$couleur-vert: green;
+$couleur-rouge: red;
+$couleur-orange: orange;
+$padding-px: 16px;
+
+body {
+    font: 100% $font-stack;
+    color: $couleur-gris;
+    margin: 0;
+    padding: 0;
+    background-color: $couleur-blanc;
+    overflow-x: hidden;
+}
+main {
+    padding: 0 1em;
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+article section {
+    flex-grow: 1;
+    flex-basis: 45%;
+    border: 1px $couleur-gris solid;
+    -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    box-shadow: 10px 10px 15px -4px $couleur-gris;
+    padding: $padding-px;
+    margin: 16px;
+    clear: both;
+    overflow: auto;
+    box-sizing: border-box;
+}
+article section#selling-points {
+    flex-grow: 2;
+    flex-basis: 100%;
+}
+article code {
+    background: $couleur-noir;
+    border: 1px solid $couleur-gris;
+    color: $couleur-bordure;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+article code.before {
+    float: left;
+    width: 40%;
+}
+article code.after {
+    float: right;
+    width: 40%;
+}
+h1,
+h2,
+h3 {
+    color: $couleur-rose;
+}
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 32px;
+    margin-bottom: 0px;
+}
+.messages {
+    padding: $padding-px;
+}
+
+.success,
+.error,
+.warning {
+    border: 1px solid $couleur-bordure;
+    padding: $padding-px;
+    color: $couleur-blanc;
+}
+.success {
+    background-color: $couleur-vert;
+}
+
+.error {
+    background-color: $couleur-rouge;
+}
+
+.warning {
+    background-color: $couleur-orange;
+}
