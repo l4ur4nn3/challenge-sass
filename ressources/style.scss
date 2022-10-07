@@ -8,6 +8,13 @@ $couleur-vert: green;
 $couleur-rouge: red;
 $couleur-orange: orange;
 $padding-px: 16px;
+@mixin theme($theme: GreyShadow){
+    -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
+    box-shadow: 10px 10px 15px -4px $couleur-gris;
+  }
+
+  
 
 header {
     h1 {
@@ -24,11 +31,11 @@ body {
     font: 100% $font-stack;
     color: $couleur-gris;
     margin: 0;
-    padding: 0;
+    padding: $padding-px;
     background-color: $couleur-blanc;
     overflow-x: hidden;
     main {
-        padding: 0 1em;
+        padding: $padding-px;
         padding-top: 0;
         padding-bottom: 0;
         h2 {
@@ -41,9 +48,7 @@ body {
                 flex-grow: 1;
                 flex-basis: 45%;
                 border: 1px $couleur-gris solid;
-                -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
-                -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
-                box-shadow: 10px 10px 15px -4px $couleur-gris;
+                @include theme($theme: GreyShadow);
                 padding: $padding-px;
                 margin: 16px;
                 clear: both;
@@ -65,7 +70,7 @@ body {
                 margin-bottom: 1.6em;
                 max-width: 100%;
                 overflow: auto;
-                padding: 1em 1.5em;
+                padding: $padding-px;
                 display: block;
                 word-wrap: break-word;
             }
@@ -110,7 +115,7 @@ footer{
     h3 {
         text-align: center;
         font-size: 1.5em;
-        padding: 32px;
+        padding: $padding-px*2;
         margin-bottom: 0px;
         @extend %h;
     }

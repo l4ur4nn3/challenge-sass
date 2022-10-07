@@ -8,11 +8,11 @@ body {
   font: 100% "Space Mono", monospace;
   color: #6b717f;
   margin: 0;
-  padding: 0;
+  padding: 16px;
   background-color: #fff;
   overflow-x: hidden; }
   body main {
-    padding: 0 1em;
+    padding: 16px;
     padding-top: 0;
     padding-bottom: 0; }
     body main article {
@@ -44,7 +44,7 @@ body {
         margin-bottom: 1.6em;
         max-width: 100%;
         overflow: auto;
-        padding: 1em 1.5em;
+        padding: 16px;
         display: block;
         word-wrap: break-word; }
       body main article .before {
