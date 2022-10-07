@@ -9,6 +9,17 @@ $couleur-rouge: red;
 $couleur-orange: orange;
 $padding-px: 16px;
 
+header {
+    h1 {
+        text-align: center;
+        @extend %h;
+    }
+}
+
+%h {
+    color: $couleur-rose;
+}
+
 body {
     font: 100% $font-stack;
     color: $couleur-gris;
@@ -16,88 +27,86 @@ body {
     padding: 0;
     background-color: $couleur-blanc;
     overflow-x: hidden;
-}
-main {
-    padding: 0 1em;
-}
-article {
-    display: flex;
-    flex-wrap: wrap;
-}
-article section {
-    flex-grow: 1;
-    flex-basis: 45%;
-    border: 1px $couleur-gris solid;
-    -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
-    -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
-    box-shadow: 10px 10px 15px -4px $couleur-gris;
-    padding: $padding-px;
-    margin: 16px;
-    clear: both;
-    overflow: auto;
-    box-sizing: border-box;
-}
-article section#selling-points {
-    flex-grow: 2;
-    flex-basis: 100%;
-}
-article code {
-    background: $couleur-noir;
-    border: 1px solid $couleur-gris;
-    color: $couleur-bordure;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
-}
-article code.before {
-    float: left;
-    width: 40%;
-}
-article code.after {
-    float: right;
-    width: 40%;
-}
-h1,
-h2,
-h3 {
-    color: $couleur-rose;
-}
-h1 {
-    text-align: center;
+    main {
+        padding: 0 1em;
+        h2 {
+            @extend %h;
+        }
+        article {
+            display: flex;
+            flex-wrap: wrap;
+            section {
+                flex-grow: 1;
+                flex-basis: 45%;
+                border: 1px $couleur-gris solid;
+                -webkit-box-shadow: 10px 10px 15px -4px $couleur-gris;
+                -moz-box-shadow: 10px 10px 15px -4px $couleur-gris;
+                box-shadow: 10px 10px 15px -4px $couleur-gris;
+                padding: $padding-px;
+                margin: 16px;
+                clear: both;
+                overflow: auto;
+                box-sizing: border-box;
+            }
+            #selling-points {
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+            code {
+                background: $couleur-noir;
+                border: 1px solid $couleur-gris;
+                color: $couleur-bordure;
+                page-break-inside: avoid;
+                font-family: monospace;
+                font-size: 15px;
+                line-height: 1.6;
+                margin-bottom: 1.6em;
+                max-width: 100%;
+                overflow: auto;
+                padding: 1em 1.5em;
+                display: block;
+                word-wrap: break-word;
+            }
+            .before {
+                float: left;
+                width: 40%;
+            }
+            .after {
+                float: right;
+                width: 40%;
+            }
+        }
+        .messages {
+            padding: $padding-px;
+            %messages {
+                border: 1px solid $couleur-bordure;
+                padding: $padding-px;
+                color: $couleur-blanc;
+            }
+            .success {
+                background-color: $couleur-vert;
+                @extend %messages;
+            }
+
+            .error {
+                background-color: $couleur-rouge;
+                @extend %messages;
+            }
+
+            .warning {
+                background-color: $couleur-orange;
+                @extend %messages;
+            }
+        }
+    }
 }
 
-h3 {
-    text-align: center;
-    font-size: 1.5em;
-    padding: 32px;
-    margin-bottom: 0px;
-}
-.messages {
-    padding: $padding-px;
-}
-
-.success,
-.error,
-.warning {
-    border: 1px solid $couleur-bordure;
-    padding: $padding-px;
-    color: $couleur-blanc;
-}
-.success {
-    background-color: $couleur-vert;
-}
-
-.error {
-    background-color: $couleur-rouge;
-}
-
-.warning {
-    background-color: $couleur-orange;
+footer{
+    h3 {
+        text-align: center;
+        font-size: 1.5em;
+        padding: 32px;
+        margin-bottom: 0px;
+        @extend %h;
+    }
 }
