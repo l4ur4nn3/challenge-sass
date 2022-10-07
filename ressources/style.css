@@ -12,7 +12,9 @@ body {
   background-color: #fff;
   overflow-x: hidden; }
   body main {
-    padding: 0 1em; }
+    padding: 0 1em;
+    padding-top: 0;
+    padding-bottom: 0; }
     body main article {
       display: flex;
       flex-wrap: wrap; }
@@ -61,6 +63,8 @@ body {
         background-color: green; }
       body main .messages .error {
         background-color: red; }
+        body main .messages .error:hover {
+          background-color: green; }
       body main .messages .warning {
         background-color: orange; }
 

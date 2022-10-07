@@ -29,6 +29,8 @@ body {
     overflow-x: hidden;
     main {
         padding: 0 1em;
+        padding-top: 0;
+        padding-bottom: 0;
         h2 {
             @extend %h;
         }
@@ -91,6 +93,9 @@ body {
             .error {
                 background-color: $couleur-rouge;
                 @extend %messages;
+                &:hover {
+                    background-color: $couleur-vert;
+                }
             }
 
             .warning {
